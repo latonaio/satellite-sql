@@ -1,6 +1,6 @@
 CREATE TABLE `satellite_physical_characteristic_data`
 (
-  `CodeName`                       varchar(20) NOT NULL,
+  `Satellite`                      varchar(20) NOT NULL,
   `Radius`                         varchar(20) DEFAULT NULL,
   `RadiusUnit`                     varchar(5) DEFAULT NULL,
   `AxialTilt`                      varchar(20) DEFAULT NULL,
@@ -38,6 +38,6 @@ CREATE TABLE `satellite_physical_characteristic_data`
   `CreatedDateTime`                varchar(20) DEFAULT NULL,
   `LastModifiedDateTime`           varchar(20) DEFAULT NULL,
     PRIMARY KEY (`CodeName`),
-    CONSTRAINT `SatellitePhysicalCharacteristicData_fk` FOREIGN KEY (`CodeName`) REFERENCES `satellite_general_data` (`CodeName`)
+    CONSTRAINT `SatellitePhysicalCharacteristicData_fk` FOREIGN KEY (`Satellite`) REFERENCES `satellite_general_data` (`Satellite`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

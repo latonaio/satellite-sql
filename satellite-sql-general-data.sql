@@ -1,6 +1,7 @@
 CREATE TABLE `satellite_general_data`
 (
-  `CodeName`                   varchar(20) NOT NULL,
+  `Satellite`                  varchar(20) NOT NULL,
+  `CodeName`                   varchar(20) DEFAULT NULL,
   `SatelliteOf`                varchar(20) DEFAULT NULL,
   `SatelliteType`              varchar(20) DEFAULT NULL,
   `SatelliteGroup`             varchar(20) DEFAULT NULL,
@@ -13,6 +14,6 @@ CREATE TABLE `satellite_general_data`
   `Status`                     varchar(20) DEFAULT NULL,
   `CreatedDateTime`            varchar(20) DEFAULT NULL,
   `LastModifiedDateTime`       varchar(20) DEFAULT NULL,
-    PRIMARY KEY (`CodeName`)
+    PRIMARY KEY (`Satellite`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
